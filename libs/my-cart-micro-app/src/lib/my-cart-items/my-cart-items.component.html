@@ -1,9 +1,16 @@
-<p>My Items</p>
-<ol *ngIf="myCartItems">
-  <li *ngFor="let myCartItem of myCartItems">
-    <p>
-      {{ myCartItem?.item?.name }} - {{ myCartItem?.item?.description }}
-      {{ myCartItem?.item?.libName }} {{ myCartItem?.quantity }}
-    </p>
-  </li>
-</ol>
+<p><b>My Items</b></p>
+<table>
+  <th>SNO</th>
+  <th>Product</th>
+  <th>Description</th>
+  <th>Micro App Name</th>
+  <th>Quantity</th>
+  <tr *ngFor="let myCartItem of myCartItems; let i = index" >
+      <td>{{ i + 1 }}</td>
+      <td>{{ myCartItem?.item?.name }} </td>
+      <td>{{ myCartItem?.item?.description }}</td>
+      <td>{{ myCartItem?.item?.libName }}</td>
+      <td>{{ myCartItem?.quantity }}</td>
+  </tr>
+</table>
+

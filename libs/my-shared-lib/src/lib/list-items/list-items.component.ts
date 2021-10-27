@@ -13,11 +13,14 @@ export class ListItemsComponent {
   @Input()
   items !: Item[];
 
+  showMessage = "";
+
 
   public addItem(data: Item) {
     const item: Item = new Item(data.name, data.description, data.libName);
-    //ItemUtils.addSelectedItem(item, "Lib 1");  
+    //ItemUtils.addSelectedItem(item, "Micro App two");  
     ItemUtils.addSelectedItem(item);
+    this.showMessage = "Item "+item.name+" added to cart";
   }
 
 }

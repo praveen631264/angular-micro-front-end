@@ -10,6 +10,6 @@ export class AddItemMicroAppTwoComponent implements OnInit {
   items!: Item[];
 
   ngOnInit(): void {
-    this.items = ItemUtils.getByLibName('Lib 2');
+    this.items = ItemUtils.getByLibName('Micro App two');
   }
 }

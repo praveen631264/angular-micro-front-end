@@ -11,6 +11,6 @@ export class AddItemMicroAppOneComponent implements OnInit {
 
   ngOnInit(): void {
     //throw new Error('Method not implemented.');
-    this.items = ItemUtils.getByLibName('Lib 1');
+    this.items = ItemUtils.getByLibName('Micro App one');
   }
 }

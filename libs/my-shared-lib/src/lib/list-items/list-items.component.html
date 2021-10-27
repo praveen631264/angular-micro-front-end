@@ -1,7 +1,14 @@
-<ol *ngIf="items">
-    <li *ngFor="let item of items">
-      <td>{{ item?.name }} - {{ item?.description }}</td>
+<table>
+  <th>SNO</th>
+  <th>Product</th>
+  <th>Description</th>
+  <th>Add To Cart</th>
+  <tr *ngFor="let item of items; let i = index" >
+      <td>{{ i + 1 }}</td>
+      <td>{{ item?.name }} </td>
+      <td>{{ item?.description }}</td>
       <td><button (click)="addItem(item)">Add</button></td>
-    </li>
-</ol>
-  
+  </tr>
+</table>
+<br/>
+{{showMessage}}
