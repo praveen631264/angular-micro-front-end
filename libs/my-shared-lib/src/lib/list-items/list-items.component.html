@@ -1,0 +1,7 @@
+<ol *ngIf="items">
+    <li *ngFor="let item of items">
+      <td>{{ item?.name }} - {{ item?.description }}</td>
+      <td><button (click)="addItem(item)">Add</button></td>
+    </li>
+</ol>
+  

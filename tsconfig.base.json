@@ -14,7 +14,26 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@angular-micro-front-end/my-cart-micro-app": [
+        "libs/my-cart-micro-app/src/index.ts"
+      ],
+      "@angular-micro-front-end/my-cart-utils": [
+        "libs/my-cart-utils/src/index.ts"
+      ],
+      "@angular-micro-front-end/my-micro-app-one": [
+        "libs/my-micro-app-one/src/index.ts"
+      ],
+      "@angular-micro-front-end/my-micro-app-two": [
+        "libs/my-micro-app-two/src/index.ts"
+      ],
+      "@angular-micro-front-end/my-shared-lib": [
+        "libs/my-shared-lib/src/index.ts"
+      ],
+      "@angular-micro-front-end/test-lib-without-package-json": [
+        "libs/test-lib-without-package-json/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

@@ -1,0 +1,9 @@
+<p>My Items</p>
+<ol *ngIf="myCartItems">
+  <li *ngFor="let myCartItem of myCartItems">
+    <p>
+      {{ myCartItem?.item?.name }} - {{ myCartItem?.item?.description }}
+      {{ myCartItem?.item?.libName }} {{ myCartItem?.quantity }}
+    </p>
+  </li>
+</ol>

@@ -93,7 +93,7 @@
           }
         }
       },
-      "tags": []
+      "tags": ["app"]
     },
     "angular-app-e2e": {
       "root": "apps/angular-app-e2e",
@@ -123,6 +123,242 @@
       },
       "tags": [],
       "implicitDependencies": ["angular-app"]
+    },
+    "my-cart-micro-app": {
+      "projectType": "library",
+      "root": "libs/my-cart-micro-app",
+      "sourceRoot": "libs/my-cart-micro-app/src",
+      "prefix": "angular-micro-front-end",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/my-cart-micro-app"],
+          "options": {
+            "project": "libs/my-cart-micro-app/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/my-cart-micro-app/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/my-cart-micro-app/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/my-cart-micro-app"],
+          "options": {
+            "jestConfig": "libs/my-cart-micro-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/my-cart-micro-app/src/**/*.ts",
+              "libs/my-cart-micro-app/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["my-cart-app"]
+    },
+    "my-cart-utils": {
+      "projectType": "library",
+      "root": "libs/my-cart-utils",
+      "sourceRoot": "libs/my-cart-utils/src",
+      "prefix": "angular-micro-front-end",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/my-cart-utils"],
+          "options": {
+            "project": "libs/my-cart-utils/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/my-cart-utils/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/my-cart-utils/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/my-cart-utils"],
+          "options": {
+            "jestConfig": "libs/my-cart-utils/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/my-cart-utils/src/**/*.ts",
+              "libs/my-cart-utils/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["my-cart-utils"]
+    },
+    "my-micro-app-one": {
+      "projectType": "library",
+      "root": "libs/my-micro-app-one",
+      "sourceRoot": "libs/my-micro-app-one/src",
+      "prefix": "angular-micro-front-end",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/my-micro-app-one"],
+          "options": {
+            "project": "libs/my-micro-app-one/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/my-micro-app-one/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/my-micro-app-one/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/my-micro-app-one"],
+          "options": {
+            "jestConfig": "libs/my-micro-app-one/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/my-micro-app-one/src/**/*.ts",
+              "libs/my-micro-app-one/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["micro-app-one"]
+    },
+    "my-micro-app-two": {
+      "projectType": "library",
+      "root": "libs/my-micro-app-two",
+      "sourceRoot": "libs/my-micro-app-two/src",
+      "prefix": "angular-micro-front-end",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/my-micro-app-two"],
+          "options": {
+            "project": "libs/my-micro-app-two/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/my-micro-app-two/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/my-micro-app-two/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/my-micro-app-two"],
+          "options": {
+            "jestConfig": "libs/my-micro-app-two/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/my-micro-app-two/src/**/*.ts",
+              "libs/my-micro-app-two/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["micro-app-two"]
+    },
+    "my-shared-lib": {
+      "projectType": "library",
+      "root": "libs/my-shared-lib",
+      "sourceRoot": "libs/my-shared-lib/src",
+      "prefix": "angular-micro-front-end",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "outputs": ["dist/libs/my-shared-lib"],
+          "options": {
+            "project": "libs/my-shared-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/my-shared-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/my-shared-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/my-shared-lib"],
+          "options": {
+            "jestConfig": "libs/my-shared-lib/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/my-shared-lib/src/**/*.ts",
+              "libs/my-shared-lib/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": ["shared-lib"]
+    },
+    "test-lib-without-package-json": {
+      "projectType": "library",
+      "root": "libs/test-lib-without-package-json",
+      "sourceRoot": "libs/test-lib-without-package-json/src",
+      "prefix": "angular-micro-front-end",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/test-lib-without-package-json"],
+          "options": {
+            "jestConfig": "libs/test-lib-without-package-json/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/test-lib-without-package-json/src/**/*.ts",
+              "libs/test-lib-without-package-json/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }
